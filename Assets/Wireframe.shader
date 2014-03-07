@@ -1,6 +1,7 @@
 ﻿Shader "Custom/Wireframe" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
+		_Gain ("Gain", Float) = 1.5
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" "LightMode"="Vertex" }
@@ -15,6 +16,7 @@
 			#include "UnityCG.cginc"
 
 			sampler2D _MainTex;
+			float _Gain;
 			
 			struct appdata {
 				float4 vertex : POSITION;
@@ -26,7 +28,6 @@
 			struct vs2ps {
 				float4 vertex : POSITION;
 				float2 uv : TEXCOORD0;
-				float4 color : COLOR;
 				float3 bary;
 			};
 			
@@ -34,14 +35,13 @@
 				vs2ps o;
 				o.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
 				o.bary = IN.tangent.xyz;
-				o.color = float4(2.0 * ShadeVertexLights(IN.vertex, IN.normal), 1.0);
 				o.uv = IN.uv;
 				return o;
 			}
 			
 			float4 frag(vs2ps IN) : COLOR {
 				float d = fwidth(IN.bary);
-				float3 a3 = smoothstep(float3(0.0), 1.5 * d, IN.bary);
+				float3 a3 = smoothstep(float3(0.0), _Gain * d, IN.bary);
 				float t = min(min(a3.x, a3.y), a3.z);
 				
 				float4 c = tex2D(_MainTex, IN.uv);
