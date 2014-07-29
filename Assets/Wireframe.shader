@@ -40,7 +40,7 @@
 			}
 			
 			float4 frag(vs2ps IN) : COLOR {
-				float d = fwidth(IN.bary);
+				float3 d = fwidth(IN.bary);
 				float3 a3 = smoothstep(float3(0.0), _Gain * d, IN.bary);
 				float t = min(min(a3.x, a3.y), a3.z);
 				
