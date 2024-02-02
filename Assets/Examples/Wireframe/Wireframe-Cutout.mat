@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wireframe
-  m_Shader: {fileID: 4800000, guid: f452ad6590d864a83a6e8ed63f1fb66e, type: 3}
+  m_Name: Wireframe-Cutout
+  m_Shader: {fileID: 4800000, guid: 82874345584646f4b8babba77ffba49f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
