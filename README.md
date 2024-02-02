@@ -9,4 +9,5 @@ Released as [UPM package on OpenUPM](https://openupm.com/packages/jp.nobnak.wire
 - Add scope "jp.nobnak"
 - Add package "Wireframe shader" in Package Manager.
 
-[![Demo](Img/Wireframe.jpg)](http://nobnak.github.io/SceneSamples/WireframeShader/WireframeShader.html)
+## Demo
+[![thumbnail](http://img.youtube.com/vi/xMy5hQ3M-Os/mqdefault.jpg)](https://youtu.be/xMy5hQ3M-Os)
