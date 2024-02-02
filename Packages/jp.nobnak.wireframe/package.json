@@ -1,0 +1,12 @@
+{
+	"author": {
+		"name": "Nakata Nobuyuki",
+		"email": "nobu.nakata@gmail.com"
+	},
+	"name": "jp.nobnak.wireframe",
+	"displayName": "Wireframe shader",
+	"version": "1.0.0",
+
+	"dependencies": {
+	}
+}
